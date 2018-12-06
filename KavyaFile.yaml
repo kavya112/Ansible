@@ -1,0 +1,8 @@
+---
+- hosts: nodes
+  tasks:
+    - name: creating file in node
+      file:
+        path: /root/Ansible/KavyaFile
+        state: touch
+        mode: 777
