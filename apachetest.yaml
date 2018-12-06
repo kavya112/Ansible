@@ -11,5 +11,5 @@
         state: started
     - name: update the index file
       copy:
-        src: index.html
+        content: "<h1> Hi DTP </h1>"
         dest: /var/www/html/index.html
