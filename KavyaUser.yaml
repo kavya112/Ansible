@@ -1,0 +1,9 @@
+---
+- hosts: nodes
+  tasks:
+    - name: user creation in Ansible
+      user: 
+        name: KavyaUser
+        state: present
+        mode: 777
+
