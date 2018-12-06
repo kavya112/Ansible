@@ -1,0 +1,15 @@
+---
+- hosts: nodes
+  vars:
+    user1: Cap1
+    user2: Cap2
+    user3: Cap3
+  tasks:
+    - name: Create users {{user1}},{{user2}},{{user3}}
+      user:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - "{{user1}}"
+        - "{{user2}}"
+        - "{{user3}}"
