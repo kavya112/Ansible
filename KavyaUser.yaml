@@ -5,5 +5,3 @@
       user: 
         name: KavyaUser
         state: present
-        mode: 777
-

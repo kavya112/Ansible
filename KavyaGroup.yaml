@@ -1,0 +1,7 @@
+---
+- hosts: nodes
+  tasks:
+    - name: group creation in Ansible
+      group: 
+        name: KavyaGroup
+        state: present
