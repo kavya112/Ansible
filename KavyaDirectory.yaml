@@ -1,0 +1,8 @@
+---
+- hosts: nodes
+  tasks:
+    - name: creating directory in node
+      Directory:
+        path: /root/Ansible/KavyaDirectory
+        state: present
+        mode: 777
