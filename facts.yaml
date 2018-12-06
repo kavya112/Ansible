@@ -1,0 +1,23 @@
+---
+- hosts: nodes
+  tasks:
+    - name: installing nginx on {{ ansible_distribution }} based machine
+      package:
+        name: nginx
+        state: present
+    - name: update nginx config
+      copy:
+        src: /root/default
+        dest: /etc/nginx/sites-available/default
+      notify: 
+        - restart nginx
+    - name: update nginx file
+      copy:
+        content: "<h1> Hi Nginx </h1>"
+        dest: /var/www/html/index.html
+  handlers: 
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+
